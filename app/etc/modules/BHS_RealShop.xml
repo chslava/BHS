@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <BHS_RealShop>
+            <active>true</active>
+            <codePool>local</codePool>
+        </BHS_RealShop>
+    </modules>
+</config>

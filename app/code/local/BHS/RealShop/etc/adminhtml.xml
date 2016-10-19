@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<config>
+    <menu>
+        <bhs_realshop translate="title" module="bhs_realshop">
+            <title>BHS</title>
+            <sort_order>15</sort_order>
+            <children>
+                <shop translate="title" module="bhs_realshop">
+                    <title>Real Shop</title>
+                    <sort_order>10</sort_order>
+                    <action>adminhtml/realshop/index</action>
+                </shop>
+            </children>
+        </bhs_realshop>
+    </menu>
+</config>
