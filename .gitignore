@@ -93,3 +93,4 @@ skin/frontend/default/modern/
 skin/install/
 var/
 /.idea
+!app/design/adminhtml/default/default/layout/bhs_realshop.xml

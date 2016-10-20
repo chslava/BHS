@@ -48,6 +48,15 @@
             </bhs_realshop>
         </helpers>
     </global>
+    <adminhtml>
+        <layout>
+            <updates>
+                <bhs_realshop>
+                    <file>bhs_realshop.xml</file>
+                </bhs_realshop>
+            </updates>
+        </layout>
+    </adminhtml>
     <frontend>
         <routers>
             <bhs_realshop>

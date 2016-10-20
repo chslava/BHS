@@ -3,6 +3,6 @@ class BHS_RealShop_Model_Resource_Realshop_Collection extends Mage_Core_Model_Re
 {
     public function _construct()
     {
-        $this->_init('bhs_realshop/bhs_realshopt');
+        $this->_init('bhs_realshop/realshop');
     }
 }

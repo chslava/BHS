@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+
+<layout>
+    <adminhtml_realshop_index>
+        <reference name="content">
+            <block type="bhs_realshop/adminhtml_shop" name="shop" />
+        </reference>
+    </adminhtml_realshop_index>
+
+    <adminhtml_realshop_edit>
+        <reference name="content">
+            <block type="bhs_realshop/adminhtml_shop_edit" name="shop_edit" />
+        </reference>
+    </adminhtml_realshop_edit>
+
+</layout>
