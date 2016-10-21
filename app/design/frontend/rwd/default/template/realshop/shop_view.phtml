@@ -1,0 +1,27 @@
+<?php
+/* @var BHS_RealShop_Model_Realshop */
+$shop = Mage::registry('current_shop');
+?>
+
+<div class="shop wrapper">
+<?php if (isset($shop)): ?>
+    <div class="page-title">
+        <h1><?php echo $shop->getShopName() ?></h1>
+    </div>
+    <div class="shop-image" style="background-image: url('<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_MEDIA), $shop->getImage(); ?>')"></div>
+    <div class="description">
+        <div class="block-title"><strong><?php echo $this->__('Shop Description') ;?></strong></div>
+        <div class="text"><?php echo $shop->getShortDescription();?></div>
+    </div>
+    <?php if ($shop->getLongDescription()): ?>
+        <div class="description long">
+            <div class="block-title"><strong><?php echo $this->__('Shop Story') ;?></strong></div>
+            <div class="text"><?php echo $shop->getLongDescription();?></div>
+        </div>
+    <?php endif;?>
+    <div class="address">
+        <div class="block-title"><strong><?php echo $this->__('Shop Address') ;?></strong></div>
+        <div class="text"><?php echo $shop->getAddress();?></div>
+    </div>
+<?php endif;?>
+</div>

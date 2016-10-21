@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+    <default>
+        <reference name="head">
+            <action method="addCss"><stylesheet>css/bhs_realshop.css</stylesheet></action>
+        </reference>
+
+        <reference name="top.links">
+            <action method="addLink" translate="label title" module="bhs_realshop">
+                <label>Real Shop List</label>
+                <url helper="bhs_realshop/getShopListUrl"/>
+                <title>Real Shop List</title>
+                <prepare/><urlParams/>
+                <position>800</position>
+            </action>
+        </reference>
+    </default>
+    <bhs_realshop_index_index>
+        <reference name="content">
+            <block type="bhs_realshop/shop_list" name="shop_list" template="realshop/shop_list.phtml" />
+        </reference>
+    </bhs_realshop_index_index>
+
+    <bhs_realshop_index_shop>
+        <reference name="content">
+            <block type="core/template" name="shop_view" template="realshop/shop_view.phtml" />
+        </reference>
+    </bhs_realshop_index_shop>
+</layout>

@@ -1,0 +1,25 @@
+<?php
+/* @var $shopCollection Mage_Core_Model_Resource_Db_Collection_Abstract */
+$shopCollection = $this->getShopCollection();
+
+/* @var $helper BHS_RealShop_Helper_Data */
+$helper = Mage::helper('bhs_realshop');
+?>
+<div class="page-title">
+    <h1><?php echo $this->__('Real Shops List') ?></h1>
+</div>
+<?php if ($shopCollection->count()): ?>
+<div class="wrapper">
+    <ul class="shop-list">
+        <?php foreach($shopCollection as $shop): ?>
+            <li>
+                <a href="<?php echo $this->getShopUrl($shop);?>"><img src="<?php echo $helper->resizeImage($shop->getImage(),250,300);?>"/></a>
+                <div class="title"><span><?php echo $shop->getShopName();?></span></div>
+                <div class="description"><?php echo $shop->getShortDescription();?></div>
+            </li>
+        <?php endforeach; ?>
+    </ul>
+</div>
+<?php else: ?>
+    <div><?php echo $this->__('There isn\'t Shops yet');?></div>
+<?php endif; ?>

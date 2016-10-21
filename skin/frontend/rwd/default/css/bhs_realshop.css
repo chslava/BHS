@@ -1,0 +1,22 @@
+.wrapper{
+    width: 100%;
+}
+
+.shop-list li{
+    width: 50%;
+    float: left;
+    text-align: center;
+}
+
+.shop-list li>a{
+    display: inline-block;
+}
+.shop-image {
+    background-size: cover;
+    width: 450px;
+    height: 500px;
+    background-position: center center;
+    margin: 0 auto;
+}
+
+.shop .block-title{margin-top: 40px;}
