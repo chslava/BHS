@@ -7,7 +7,6 @@ class BHS_RealShop_Block_Adminhtml_Shop_Edit_Form extends Mage_Adminhtml_Block_W
         if (Mage::getSingleton('adminhtml/session')->getShopData())
         {
             $data = Mage::getSingleton('adminhtml/session')->getShopData();
-            Mage::getSingleton('adminhtml/session')->getShopData(null);
         }
         elseif (Mage::registry('shop_data'))
         {

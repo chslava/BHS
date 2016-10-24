@@ -13,4 +13,18 @@
             </children>
         </bhs_realshop>
     </menu>
+
+    <acl>
+        <resources>
+            <admin>
+                <children>
+                    <bhs_realshop translate="title" module="bhs_realshop">
+                        <title>BHS</title>
+                        <sort_order>10</sort_order>
+                    </bhs_realshop>
+                </children>
+            </admin>
+        </resources>
+    </acl>
+
 </config>

@@ -43,8 +43,11 @@ class BHS_RealShop_Adminhtml_RealshopController extends Mage_Adminhtml_Controlle
         {
             if (isset( $_FILES['image']['name']) && file_exists($_FILES['image']['tmp_name']) )
             {
-                $this->_uploadImage('image');
-                $data['image'] =  $_FILES['image']['name'] ;
+                if ($this->_uploadImage('image')) {
+                    $data['image'] =  $_FILES['image']['name'] ;
+                } else {
+                    unset($data['image']);
+                }
             }
             else
             {
@@ -147,7 +150,7 @@ class BHS_RealShop_Adminhtml_RealshopController extends Mage_Adminhtml_Controlle
             $result = $uploader->save($path, $_FILES[$name]['name']);
 
         }catch(Exception $e) {
-
+            Mage::getSingleton('core/session')->addError('Unable to save image. ' . $e->getMessage());
         }
 
         return $result;

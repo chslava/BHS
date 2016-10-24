@@ -43,11 +43,4 @@ class BHS_RealShop_Block_Adminhtml_Shop_Edit extends Mage_Adminhtml_Block_Widget
         }
     }
 
-    protected function _prepareLayout()
-    {
-        if ($this->_blockGroup && $this->_controller && $this->_mode) {
-            $this->setChild('form', $this->getLayout()->createBlock($this->_blockGroup . '/' . $this->_controller . '_' . $this->_mode . '_form'));
-        }
-        return parent::_prepareLayout();
-    }
 }
